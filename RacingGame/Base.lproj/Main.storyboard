@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MpA-cV-6pE">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -29,7 +29,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="139"/>
+            <point key="canvasLocation" x="-42" y="139"/>
         </scene>
         <!--Playing Game Controller-->
         <scene sceneID="KW1-4p-CQE">
@@ -39,21 +39,86 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Screen 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIC-XL-nSA">
-                                <rect key="frame" x="186" y="302" width="68" height="21"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="road" translatesAutoresizingMaskIntoConstraints="NO" id="AkU-bd-RwM">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="car_4" translatesAutoresizingMaskIntoConstraints="NO" id="Pzu-Af-IML">
+                                <rect key="frame" x="294" y="469" width="65" height="135"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="car_2" translatesAutoresizingMaskIntoConstraints="NO" id="TkZ-hu-rwQ">
+                                <rect key="frame" x="44" y="469" width="65" height="135"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="car_1" translatesAutoresizingMaskIntoConstraints="NO" id="bv8-6I-dGF">
+                                <rect key="frame" x="-370" y="10" width="65" height="135"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="car_1" translatesAutoresizingMaskIntoConstraints="NO" id="O1a-89-EdK">
+                                <rect key="frame" x="-370" y="10" width="65" height="135"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="car_1" translatesAutoresizingMaskIntoConstraints="NO" id="D4f-My-Zmf">
+                                <rect key="frame" x="175" y="727" width="65" height="135"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="etm-w1-1A4" appends="YES" id="AhN-Jd-xxd"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="car_3" translatesAutoresizingMaskIntoConstraints="NO" id="z8i-mN-767">
+                                <rect key="frame" x="98" y="186" width="65" height="135"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="coin_1" translatesAutoresizingMaskIntoConstraints="NO" id="kgQ-pu-X15">
+                                <rect key="frame" x="238" y="291" width="39" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIM-3X-qOQ">
+                                <rect key="frame" x="349" y="44" width="65" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="1" green="0.93294154539999996" blue="0.46153581329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7V-lB-hY3">
+                                <rect key="frame" x="255" y="46" width="104" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="1" green="0.93294154539999996" blue="0.46153581329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUA-4J-2XJ">
+                                <rect key="frame" x="33" y="35" width="65" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="pause_button"/>
+                                <connections>
+                                    <action selector="buttonControl:" destination="MpA-cV-6pE" eventType="touchUpInside" id="HGX-Ca-Jjy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="ap8-MJ-DQJ"/>
                     </view>
+                    <connections>
+                        <outlet property="coin" destination="kgQ-pu-X15" id="RvV-Dp-fUV"/>
+                        <outlet property="lblDiem" destination="pIM-3X-qOQ" id="Axi-as-aF1"/>
+                        <outlet property="pauseAndResume" destination="eUA-4J-2XJ" id="s2U-Vq-1T5"/>
+                        <outlet property="racetrack" destination="AkU-bd-RwM" id="qsa-9B-prd"/>
+                        <outlet property="xe" destination="D4f-My-Zmf" id="fRV-Se-jVR"/>
+                        <outlet property="xe1" destination="TkZ-hu-rwQ" id="9ab-7R-BOP"/>
+                        <outlet property="xe2" destination="z8i-mN-767" id="vQK-ga-vXD"/>
+                        <outlet property="xe3" destination="Pzu-Af-IML" id="wDE-T6-uO4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ie-Xj-1gH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="etm-w1-1A4">
+                    <connections>
+                        <action selector="KeoTha:" destination="MpA-cV-6pE" id="Gq8-nV-rl8"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="883" y="139"/>
+            <point key="canvasLocation" x="882.60869565217399" y="138.61607142857142"/>
         </scene>
         <!--End Game Controller-->
         <scene sceneID="tTa-ap-F68">
@@ -80,4 +145,13 @@
             <point key="canvasLocation" x="1629" y="139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="car_1" width="221" height="468.33334350585938"/>
+        <image name="car_2" width="195.66667175292969" height="434.33334350585938"/>
+        <image name="car_3" width="227.33332824707031" height="458.66665649414062"/>
+        <image name="car_4" width="227" height="469"/>
+        <image name="coin_1" width="100" height="100"/>
+        <image name="pause_button" width="170.66667175292969" height="170.66667175292969"/>
+        <image name="road" width="195.66667175292969" height="486.66665649414062"/>
+    </resources>
 </document>
