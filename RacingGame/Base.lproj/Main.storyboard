@@ -75,29 +75,50 @@
                                 <rect key="frame" x="238" y="291" width="39" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIM-3X-qOQ">
-                                <rect key="frame" x="349" y="44" width="65" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" red="1" green="0.93294154539999996" blue="0.46153581329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7V-lB-hY3">
-                                <rect key="frame" x="255" y="46" width="104" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" red="1" green="0.93294154539999996" blue="0.46153581329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUA-4J-2XJ">
-                                <rect key="frame" x="33" y="35" width="65" height="83"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="pause_button"/>
-                                <connections>
-                                    <action selector="buttonControl:" destination="MpA-cV-6pE" eventType="touchUpInside" id="HGX-Ca-Jjy"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="9YD-Ct-qGm">
+                                <rect key="frame" x="20" y="30" width="374" height="60"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4nT-ZQ-cOw">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUA-4J-2XJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="JHc-ZV-OhR"/>
+                                                    <constraint firstAttribute="height" constant="60" id="uQM-X2-IbB"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="pause_button"/>
+                                                <connections>
+                                                    <action selector="buttonControl:" destination="MpA-cV-6pE" eventType="touchUpInside" id="HGX-Ca-Jjy"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="s2W-pK-7r9">
+                                        <rect key="frame" x="272.5" y="0.0" width="101.5" height="36"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7V-lB-hY3">
+                                                <rect key="frame" x="0.0" y="0.0" width="82.5" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <color key="textColor" red="1" green="0.93294154539999996" blue="0.46153581329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIM-3X-qOQ">
+                                                <rect key="frame" x="82.5" y="0.0" width="19" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <color key="textColor" red="1" green="0.93294154539999996" blue="0.46153581329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="9YD-Ct-qGm" firstAttribute="top" secondItem="0JJ-p2-nQG" secondAttribute="top" constant="30" id="9BF-Bx-cFP"/>
+                            <constraint firstItem="9YD-Ct-qGm" firstAttribute="leading" secondItem="ap8-MJ-DQJ" secondAttribute="leading" constant="20" id="QGr-2F-mPT"/>
+                            <constraint firstItem="ap8-MJ-DQJ" firstAttribute="trailing" secondItem="9YD-Ct-qGm" secondAttribute="trailing" constant="20" id="iXX-zi-4RJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ap8-MJ-DQJ"/>
                     </view>
                     <connections>
