@@ -10,8 +10,12 @@ import UIKit
 
 class StartGameController: UIViewController {
 
+    @IBAction func ExitGame(_ sender: UIButton) {
+        exit(0)
+    }
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
+       super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
