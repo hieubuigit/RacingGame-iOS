@@ -10,13 +10,17 @@ import UIKit
 
 class PlayingGameController: UIViewController {
 
+    var Score = ""
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func next(_ sender: Any) {
+        EndGame()
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -26,5 +30,15 @@ class PlayingGameController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    func EndGame(){
+           //self.Score = lblDiem.text ?? ""
+         self.Score = "1"
+           performSegue(withIdentifier: "EndGame", sender: self)
+       }
+       
+       override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+           let vc = segue.destination as! EndGameController
+           vc.Score = self.Score
+       }
 }

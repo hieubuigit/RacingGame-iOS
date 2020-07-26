@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -31,7 +32,55 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-
-
+    
+    // core data
+    
+        lazy var persistentContainer: NSPersistentContainer = {
+           
+            let container = NSPersistentContainer(name: "GameModel")
+            container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+                if let error = error as NSError? {
+                    
+                    fatalError("Unresolved error \(error), \(error.userInfo)")
+                }
+            })
+            return container
+        }()
+    
+        func saveContext () {
+            let context = persistentContainer.viewContext
+            if context.hasChanges {
+                do {
+                    try context.save()
+                } catch {
+                    let nserror = error as NSError
+                    fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+                }
+            }
+        }
+        
+    
+        func sceneDidEnterBackground(_ scene: UIScene) {
+            (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+        }
+     //MARK: Lock Orientation
+    var orientationLock = UIInterfaceOrientationMask.all
+    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+        return self.orientationLock
+      }
+        struct AppUtility{
+                static func lockOrientattion(_ orientation: UIInterfaceOrientationMask){
+                    if let delegate = UIApplication.shared.delegate as? AppDelegate{
+                        delegate.orientationLock = orientation
+                  }
+                }
+                static func lockOrientattion(_ orientation: UIInterfaceOrientationMask, andRotateTo rotateOrientation:UIInterfaceOrientation){
+                        self.lockOrientattion(orientation)
+                        UIDevice.current.setValue(rotateOrientation.rawValue, forKey: "orientation")
+                    UINavigationController.attemptRotationToDeviceOrientation()
+                }
+            }
+            
+        
 }
 

@@ -17,6 +17,10 @@ class StartGameController: UIViewController {
     }
     
 
+    @IBAction func next(_ sender: Any) {
+       let startGameController =  EndGameController()
+             self.navigationController?.pushViewController(startGameController, animated: true)
+    }
     /*
     // MARK: - Navigation
 
