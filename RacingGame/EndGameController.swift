@@ -48,7 +48,7 @@ class EndGameController: UIViewController {
         //highScoreLabel.text = self.getHighScore()
     }
     func updateHighScoreLabel()  {
-        
+        //Set time
         DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
             self.highScoreLabel.text = self.getHighScore()
         }
