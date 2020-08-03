@@ -145,28 +145,28 @@ class PlayingGameController: UIViewController {
     
     func playerAudio(resourceName: String, typeAudio: String) {
         /*if let player = player, player.isPlaying {
-            // stop the playback
-            player.stop()
-        } else {*/
-            // set up the audio and play
-            let urlString = Bundle.main.path(forResource: resourceName, ofType: typeAudio)
-            do {
-                try AVAudioSession.sharedInstance().setMode(.default)
-                try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
-                guard let urlString = urlString else {
-                    return
-                }
-                
-                player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: urlString))
-                guard let player = player else {
-                    return
-                }
-                
-                player.play()
-                
-            } catch {
-                print("Something went wrong!")
+         // stop the playback
+         player.stop()
+         } else {*/
+        // set up the audio and play
+        let urlString = Bundle.main.path(forResource: resourceName, ofType: typeAudio)
+        do {
+            try AVAudioSession.sharedInstance().setMode(.default)
+            try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
+            guard let urlString = urlString else {
+                return
             }
+            
+            player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: urlString))
+            guard let player = player else {
+                return
+            }
+            
+            player.play()
+            
+        } catch {
+            print("Something went wrong!")
+        }
         //}
     }
     
@@ -200,14 +200,14 @@ class PlayingGameController: UIViewController {
         
         timer = Timer.scheduledTimer(timeInterval: 0.005, target: self, selector: #selector(ChayXe), userInfo: nil, repeats: true)
     }
-
+    
     func EndGame(){
-           self.Score = lblDiem.text ?? ""
-           performSegue(withIdentifier: "EndGame", sender: self)
-       }
-       
-       override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-           let vc = segue.destination as! EndGameController
-           vc.Score = self.Score
-       }
+        self.Score = lblDiem.text ?? ""
+        performSegue(withIdentifier: "EndGame", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! EndGameController
+        vc.Score = self.Score
+    }
 }

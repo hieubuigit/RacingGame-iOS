@@ -23,7 +23,6 @@ class EndGameController: UIViewController {
     }
     
     @IBOutlet weak var scoreLabel: UILabel!
-    
     @IBOutlet weak var highScoreLabel: UILabel!
     @IBOutlet weak var highscoreTitle: UILabel!
     
@@ -41,6 +40,7 @@ class EndGameController: UIViewController {
         HighScore = getHighScore()
         highScoreLabel.text = self.getHighScore()
     }
+    
     func updateHighScoreLabel()  {
         //Set time
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
@@ -49,8 +49,8 @@ class EndGameController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
             self.highScoreLabel.text = self.getHighScore()
         }
-        
     }
+    
     func AddNewHighScore(score: String) {
         
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
@@ -71,8 +71,8 @@ class EndGameController: UIViewController {
             print("Could not save. \(error), \(error.userInfo)")
         }
     }
+    
     func UpdateNewHighScore(newHighScore: String) {
-        
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         
         let managedContext = appDelegate.persistentContainer.viewContext
@@ -105,7 +105,6 @@ class EndGameController: UIViewController {
         let delete = NSBatchDeleteRequest(fetchRequest: requestFetch)
         do
         {
-            
             try managedContext.execute(delete)
             
             try managedContext.save()
@@ -116,13 +115,13 @@ class EndGameController: UIViewController {
     }
     
     func checkHighScore(score : String){
-        
         if(getHighScore() == ""){
             AddNewHighScore(score: score)
         }else if(getHighScore() < score){
             UpdateNewHighScore(newHighScore: score)
         }
     }
+    
     func getHighScore() -> String {
         var highScoreList = [AnyObject]()
         var highScore = ""
@@ -135,12 +134,10 @@ class EndGameController: UIViewController {
             highScoreList = try managedContext.fetch(request)
             for item:AnyObject in highScoreList {
                 highScore = item.value(forKey: "highscore") as! String
-                
             }
         } catch let error as NSError {
             print("Could not get. \(error), \(error.userInfo)")
         }
-        
         return highScore
     }
     

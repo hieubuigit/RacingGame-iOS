@@ -53,7 +53,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+            <point key="canvasLocation" x="-220" y="139"/>
         </scene>
         <!--Playing Game Controller-->
         <scene sceneID="KW1-4p-CQE">
@@ -165,7 +165,7 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="882.60869565217399" y="138.61607142857142"/>
+            <point key="canvasLocation" x="706" y="139"/>
         </scene>
         <!--End Game Controller-->
         <scene sceneID="tTa-ap-F68">
@@ -272,11 +272,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EVt-qE-6EC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1594" y="123"/>
+            <point key="canvasLocation" x="1612" y="139"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="7RD-bY-g0N"/>
+        <segue reference="Luw-Lu-FkX"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="car_1" width="221" height="468.33334350585938"/>
