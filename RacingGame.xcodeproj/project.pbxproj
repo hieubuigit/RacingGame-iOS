@@ -45,6 +45,7 @@
 		26E2E9B724C69AFE008D912B /* coin_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 26E2E9A024C69AFE008D912B /* coin_2.png */; };
 		26E2E9B824C69AFE008D912B /* game_over.png in Resources */ = {isa = PBXBuildFile; fileRef = 26E2E9A124C69AFE008D912B /* game_over.png */; };
 		26E2E9B924C69AFE008D912B /* racing_car.png in Resources */ = {isa = PBXBuildFile; fileRef = 26E2E9A224C69AFE008D912B /* racing_car.png */; };
+		8C48481124CD56D700C9E5C1 /* GameModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C48480F24CD56D700C9E5C1 /* GameModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,7 @@
 		26E2E9A024C69AFE008D912B /* coin_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coin_2.png; sourceTree = "<group>"; };
 		26E2E9A124C69AFE008D912B /* game_over.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = game_over.png; path = Resources/Image/game_over.png; sourceTree = SOURCE_ROOT; };
 		26E2E9A224C69AFE008D912B /* racing_car.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = racing_car.png; path = Resources/Image/racing_car.png; sourceTree = SOURCE_ROOT; };
+		8C48481024CD56D700C9E5C1 /* GameModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GameModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,8 +161,8 @@
 		26E2E8EE24C68D74008D912B /* RacingGame */ = {
 			isa = PBXGroup;
 			children = (
-				26E2E98824C69AE6008D912B /* Images */,
 				26E2E97F24C69A98008D912B /* Sounds */,
+				26E2E98824C69AE6008D912B /* Images */,
 				26E2E92724C690CC008D912B /* StartGameController.swift */,
 				26E2E92124C68F9E008D912B /* PlayingGameController.swift */,
 				26E2E92324C68FDB008D912B /* EndGameController.swift */,
@@ -171,6 +173,7 @@
 				26E2E8F124C68D74008D912B /* SceneDelegate.swift */,
 				26E2E8FA24C68D7C008D912B /* LaunchScreen.storyboard */,
 				26E2E8FD24C68D7C008D912B /* Info.plist */,
+				8C48480F24CD56D700C9E5C1 /* GameModel.xcdatamodeld */,
 			);
 			path = RacingGame;
 			sourceTree = "<group>";
@@ -420,6 +423,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26E2E8F024C68D74008D912B /* AppDelegate.swift in Sources */,
+				8C48481124CD56D700C9E5C1 /* GameModel.xcdatamodeld in Sources */,
 				26E2E8F224C68D74008D912B /* SceneDelegate.swift in Sources */,
 				261115A424C9CD96007AC422 /* AnimationForButton.swift in Sources */,
 				26E2E92824C690CC008D912B /* StartGameController.swift in Sources */,
@@ -753,6 +757,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8C48480F24CD56D700C9E5C1 /* GameModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8C48481024CD56D700C9E5C1 /* GameModel.xcdatamodel */,
+			);
+			currentVersion = 8C48481024CD56D700C9E5C1 /* GameModel.xcdatamodel */;
+			path = GameModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 26E2E8E424C68D74008D912B /* Project object */;
 }

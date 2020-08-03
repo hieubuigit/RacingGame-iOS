@@ -14,6 +14,7 @@ class PlayingGameController: UIViewController {
     var timer:Timer!
     var gameIsPause: Bool = false
     var w:CGFloat!, h:CGFloat!
+    var Score = ""
     
     @IBOutlet weak var lblDiem: UILabel!
     @IBOutlet weak var xe: UIImageView!
@@ -89,6 +90,7 @@ class PlayingGameController: UIViewController {
         // Kiem tra Player's Car cham vao Car khac
         if xe1.frame.intersects(xe.frame) || xe2.frame.intersects(xe.frame) || xe3.frame.intersects(xe.frame) {
             timer.invalidate()
+            EndGame()
         }
         
         // Tinh diem khi Player's Car cham vao coin (Hieu Bui)
@@ -198,4 +200,14 @@ class PlayingGameController: UIViewController {
         
         timer = Timer.scheduledTimer(timeInterval: 0.005, target: self, selector: #selector(ChayXe), userInfo: nil, repeats: true)
     }
+
+    func EndGame(){
+           self.Score = lblDiem.text ?? ""
+           performSegue(withIdentifier: "EndGame", sender: self)
+       }
+       
+       override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+           let vc = segue.destination as! EndGameController
+           vc.Score = self.Score
+       }
 }

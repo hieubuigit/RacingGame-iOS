@@ -16,11 +16,11 @@ class StartGameController: UIViewController {
     
     override func viewDidLoad() {
        super.viewDidLoad()
-        AppUtility.lockOrientation(.portrait)
+        AppDelegate.AppUtility.lockOrientation(.portrait)
         // Do any additional setup after loading the view.
     }
     
-    struct AppUtility {
+    /*struct AppUtility {
 
         static func lockOrientation(_ orientation: UIInterfaceOrientationMask) {
 
@@ -38,16 +38,12 @@ class StartGameController: UIViewController {
             UINavigationController.attemptRotationToDeviceOrientation()
         }
 
-    }
+    }*/
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func next(_ sender: Any) {
+       let startGameController =  EndGameController()
+             self.navigationController?.pushViewController(startGameController, animated: true)
     }
-    */
+   
 
 }
