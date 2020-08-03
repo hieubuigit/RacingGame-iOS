@@ -17,9 +17,9 @@ class EndGameController: UIViewController {
     var HighScore = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //Call function
         //DeleteHighScore()
-        insertScoreToLable()
+        //insertScoreToLable()
         //checkHighScore(score: Score)
         //updateHighScoreLabel()
     }

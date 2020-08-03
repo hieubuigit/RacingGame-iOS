@@ -18,7 +18,7 @@ class PlayingGameController: UIViewController {
     }
     
     @IBAction func next(_ sender: Any) {
-        EndGame()
+        //EndGame()
     }
     
     /*
@@ -31,7 +31,7 @@ class PlayingGameController: UIViewController {
     }
     */
     
-    func EndGame(){
+    /*func EndGame(){
            //self.Score = lblDiem.text ?? ""
          self.Score = "1"
            performSegue(withIdentifier: "EndGame", sender: self)
@@ -40,5 +40,5 @@ class PlayingGameController: UIViewController {
        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
            let vc = segue.destination as! EndGameController
            vc.Score = self.Score
-       }
+       }*/
 }

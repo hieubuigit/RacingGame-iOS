@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MpA-cV-6pE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4BX-Ql-PYS">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -50,26 +50,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2s-wf-F7p">
-                                <rect key="frame" x="186" y="444" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="next:" destination="MpA-cV-6pE" eventType="touchUpInside" id="z2s-H2-ynh"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="ap8-MJ-DQJ"/>
                     </view>
                     <navigationItem key="navigationItem" id="fF8-xX-ZTD"/>
-                    <connections>
-                        <segue destination="4BX-Ql-PYS" kind="presentation" identifier="EndGame" id="btB-Rx-REn"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ie-Xj-1gH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="710" y="123"/>
+            <point key="canvasLocation" x="708.69565217391312" y="122.54464285714285"/>
         </scene>
         <!--End Game Controller-->
         <scene sceneID="tTa-ap-F68">
@@ -140,7 +129,6 @@
                                                 <state key="normal" title="Button" image="home_button"/>
                                                 <connections>
                                                     <action selector="homeButton:" destination="4BX-Ql-PYS" eventType="touchUpInside" id="6sL-hv-Egr"/>
-                                                    <segue destination="BYZ-38-t0r" kind="show" id="Wt5-K2-WS4"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBZ-ej-6bn">
