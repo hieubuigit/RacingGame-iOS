@@ -22,6 +22,7 @@ class EndGameController: UIViewController {
         //insertScoreToLable()
         //checkHighScore(score: Score)
         //updateHighScoreLabel()
+        
     }
     
     @IBOutlet weak var scoreLabel: UILabel!
@@ -32,15 +33,7 @@ class EndGameController: UIViewController {
     }
     @IBAction func restartButton(_ sender: Any) {
     }
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+   
     //MARK: func Add, Update, Get high score
     func insertScoreToLable()  {
          scoreLabel.text = Score
