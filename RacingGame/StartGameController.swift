@@ -9,13 +9,18 @@
 import UIKit
 
 class StartGameController: UIViewController {
+    // Audio Game
+    var audioGame = AudioGame()
     
     @IBAction func ExitGame(_ sender: UIButton) {
         sender.flashButton()
+        audioGame.playerAudio(resourceName: "click_button", typeAudio: "mp3")
         exit(0)
     }
     
     override func viewDidLoad() {
+        //audioGame.playerAudio(resourceName: "animal_martin", typeAudio: "mp3")
+        
         super.viewDidLoad()
         AppDelegate.AppUtility.lockOrientation(.portrait)
         // Do any additional setup after loading the view.
@@ -44,6 +49,7 @@ class StartGameController: UIViewController {
     @IBAction func next(_ sender: UIButton) {
         let startGameController =  EndGameController()
         sender.shakeButton()
+        audioGame.playerAudio(resourceName: "click_button", typeAudio: "mp3")
         self.navigationController?.pushViewController(startGameController, animated: true)
     }
     

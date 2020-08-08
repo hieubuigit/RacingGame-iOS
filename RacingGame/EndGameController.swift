@@ -13,13 +13,14 @@ class EndGameController: UIViewController {
     
     var Score = ""
     var HighScore = ""
+    var audioGame = AudioGame()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         DeleteHighScore()
         insertScoreToLable()
         checkHighScore(score: Score)
         updateHighScoreLabel()
-        
     }
     
     @IBOutlet weak var scoreLabel: UILabel!
@@ -28,10 +29,12 @@ class EndGameController: UIViewController {
     
     @IBAction func homeButton(_ sender: UIButton) {
         sender.pulseButton()
+        audioGame.playerAudio(resourceName: "click_button", typeAudio: "mp3")
     }
     
     @IBAction func restartButton(_ sender: UIButton) {
         sender.shakeButton()
+        audioGame.playerAudio(resourceName: "click_button", typeAudio: "mp3")
     }
     
     //MARK: func Add, Update, Get high score

@@ -16,6 +16,9 @@ class PlayingGameController: UIViewController {
     var w:CGFloat!, h:CGFloat!
     var Score = ""
     
+    // Audio Game
+    var audioGame = AudioGame()
+    
     @IBOutlet weak var lblDiem: UILabel!
     @IBOutlet weak var xe: UIImageView!
     @IBOutlet weak var xe1: UIImageView!
@@ -31,14 +34,14 @@ class PlayingGameController: UIViewController {
     @IBAction func buttonControl(_ sender: UIButton) {
         if isTapped {
             sender.pulseButton()    // Animation for button
-            playerAudio(resourceName: "click_button", typeAudio: "mp3")
+            audioGame.playerAudio(resourceName: "click_button", typeAudio: "mp3")
             
             pauseAndResume.setImage(UIImage(named: "pause_button"), for: .normal)
             isTapped = false
             timer = Timer.scheduledTimer(timeInterval: 0.005, target: self, selector: #selector(ChayXe), userInfo: nil, repeats: true)
         } else {
             sender.flashButton()    // Animation for button
-            playerAudio(resourceName: "click_button", typeAudio: "mp3")
+            audioGame.playerAudio(resourceName: "click_button", typeAudio: "mp3")
             
             pauseAndResume.setImage(UIImage(named: "play_button"), for: .normal)
             isTapped = true
@@ -95,7 +98,7 @@ class PlayingGameController: UIViewController {
         
         // Tinh diem khi Player's Car cham vao coin (Hieu Bui)
         if coin.frame.intersects(xe.frame) {
-            playerAudio(resourceName: "coin_sound_effect", typeAudio: "mp3")
+            audioGame.playerAudio(resourceName: "coin_sound_effect", typeAudio: "mp3")
             
             coin.frame.origin.y = 0 - 39
             let r:Float = Float(arc4random_uniform(UInt32(w)))
@@ -140,41 +143,10 @@ class PlayingGameController: UIViewController {
         animateCoin(imageView: coin, images: coins)
     }
     
-    // MARK: Audio Game
-    var player: AVAudioPlayer?
-    
-    func playerAudio(resourceName: String, typeAudio: String) {
-        /*if let player = player, player.isPlaying {
-         // stop the playback
-         player.stop()
-         } else {*/
-        // set up the audio and play
-        let urlString = Bundle.main.path(forResource: resourceName, ofType: typeAudio)
-        do {
-            try AVAudioSession.sharedInstance().setMode(.default)
-            try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
-            guard let urlString = urlString else {
-                return
-            }
-            
-            player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: urlString))
-            guard let player = player else {
-                return
-            }
-            
-            player.play()
-            
-        } catch {
-            print("Something went wrong!")
-        }
-        //}
-    }
-    
     // MARK: ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // playerAudio(resourceName: "animal_martin", typeAudio: "mp3")
         
         // Animation for coin
         // Set up animation for coin
