@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		261115A424C9CD96007AC422 /* AnimationForButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261115A324C9CD96007AC422 /* AnimationForButton.swift */; };
+		26BD7BCF24DE4FB400B402AE /* AudioGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BD7BCE24DE4FB300B402AE /* AudioGame.swift */; };
 		26E2E8F024C68D74008D912B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E2E8EF24C68D74008D912B /* AppDelegate.swift */; };
 		26E2E8F224C68D74008D912B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E2E8F124C68D74008D912B /* SceneDelegate.swift */; };
 		26E2E8F724C68D74008D912B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26E2E8F524C68D74008D912B /* Main.storyboard */; };
@@ -66,6 +67,7 @@
 
 /* Begin PBXFileReference section */
 		261115A324C9CD96007AC422 /* AnimationForButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationForButton.swift; sourceTree = "<group>"; };
+		26BD7BCE24DE4FB300B402AE /* AudioGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioGame.swift; sourceTree = "<group>"; };
 		26E2E8EC24C68D74008D912B /* RacingGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RacingGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26E2E8EF24C68D74008D912B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26E2E8F124C68D74008D912B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				26E2E92124C68F9E008D912B /* PlayingGameController.swift */,
 				26E2E92324C68FDB008D912B /* EndGameController.swift */,
 				261115A324C9CD96007AC422 /* AnimationForButton.swift */,
+				26BD7BCE24DE4FB300B402AE /* AudioGame.swift */,
 				26E2E8F524C68D74008D912B /* Main.storyboard */,
 				26E2E8F824C68D7C008D912B /* Assets.xcassets */,
 				26E2E8EF24C68D74008D912B /* AppDelegate.swift */,
@@ -419,6 +422,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26BD7BCF24DE4FB400B402AE /* AudioGame.swift in Sources */,
 				26E2E8F024C68D74008D912B /* AppDelegate.swift in Sources */,
 				26E2E8F224C68D74008D912B /* SceneDelegate.swift in Sources */,
 				261115A424C9CD96007AC422 /* AnimationForButton.swift in Sources */,
